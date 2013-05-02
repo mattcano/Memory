@@ -8,3 +8,7 @@ $('button').on('click', function(){
   }, 1000);
 });
 
+
+function smallBoard(){
+  var
+}
