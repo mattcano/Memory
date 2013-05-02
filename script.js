@@ -1,14 +1,14 @@
 //timer function
-$('button').on('click', function(){
+$(document).ready(function(){
   var elapsedTime = 0;
-  setInterval(function(){
-    var totalTime = elapsedTime + 1;
-    var seconds = Math.floor(totalTime);
-    $('#timer').html(elapsedTime);
-  }, 1000);
+  $('#startbutton').on('click', function(){
+  window.setInterval(timerFunction, 1000);
+    function timerFunction(){
+      elapsedTime = elapsedTime + 1;
+      $('#timer').html(elapsedTime);
+    };
+  });
 });
-
-
 
 function randomLetter(){
   var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
