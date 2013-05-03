@@ -25,21 +25,24 @@ function board(size){
   for (var i = 1; i < size + 1; i++ ) {
     boardMap[i] = boardLetters[i-1];
   };
-  return boardMap;
 
-  function loadBoard(){
-    for (var i = 1; i < size + 1; i++){
-      $('.card').html('<div class="span4 card">' + boardMap[i] '</div>')
-    };
-  }
+  return boardMap;
 }
+
+// function printBoard(num){
+//   var cardHid = "<div class='span2 card'><span class='letter'>#</span></div>"
   
-  $('.card').flip({
-    
-  })
+//   _(num).times( function(){
+//     $("#gameBoard").append(cardHid);
+//   });
+// }
+
 
 //timer function
 $(document).ready(function(){
+
+  var size = 0;
+  var boardObj = {};
 
   var elapsedTime = 0;
   $('#startbutton').on('click', function(){
@@ -48,6 +51,37 @@ $(document).ready(function(){
       elapsedTime = elapsedTime + 1;
       $('#timer').html(elapsedTime);
     };
+    
+    size = 10;
+    boardObj = board(size);
+    
+
+    _(size).times( function(i){
+      var counter = i+1;
+      var cardHid = "<div id='" + counter + "'class='span2 card'><span class='letter'>#</span></div>"
+      $("#gameBoard").append(cardHid);
+      $('#' + counter).on('click', function () {
+        console.log(counter);
+        $(this).flip({
+          direction: 'bt',
+          content: "<span class='letter'>" + boardObj[counter] + "</span>",
+          color: '#f4da69',
+        });
+
+        
+      });
+
+    });
+
   });
+
+  // $('.card').on('click'), function () {
+  //   $(this).flip({
+  //     direction: 'tb'
+  //   });
+  // };
+
+
+
 });
 

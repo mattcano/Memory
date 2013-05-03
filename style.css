@@ -1,3 +1,24 @@
+#header {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 5em;
+  margin-bottom: 20px;
+  line-height: 90px;
+}
+
+.container {
+  font-family: 'Eater', serif;
+}
+
+#startbutton {
+  margin-left: 48%;
+  margin-top: 10px;
+}
+
+#timer {
+  text-align: center;
+}
+
 #timer:before {
   content: "Time elapsed: ";
 }
@@ -8,13 +29,14 @@
 
 .card {
   border: 2px solid black; 
-  font-family: 'Oleo Script Swash Caps', serif;
+  font-family: 'Eater', serif;
   font-weight: bold;
-  font-size: 5em;
+  font-size: 8em;
   height: 140px;
   margin-bottom: 20px; 
   border-radius: 30px;
   text-align: center;
+  background-color: #e2675d;
 }
 
 .row {
@@ -23,5 +45,5 @@
 
 .letter {
   display: block;
-  margin-top: 60px;
+  margin-top: 50px;
 }
