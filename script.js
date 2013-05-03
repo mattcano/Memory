@@ -29,12 +29,14 @@ function board(size){
 
   function loadBoard(){
     for (var i = 1; i < size + 1; i++){
-    $('.card').html('<div class="span4 card">' + boardMap[i] '</div>')
+      $('.card').html('<div class="span4 card">' + boardMap[i] '</div>')
     };
   }
 }
   
-
+  $('.card').flip({
+    
+  })
 
 //timer function
 $(document).ready(function(){
