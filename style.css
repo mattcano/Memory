@@ -6,15 +6,22 @@
 
 }
 
-.cards {
+.card {
   border: 2px solid black; 
-  height: 500px;
-  width: 300px;
   font-family: 'Oleo Script Swash Caps', serif;
   font-weight: bold;
   font-size: 5em;
+  height: 140px;
+  margin-bottom: 20px; 
+  border-radius: 30px;
+  text-align: center;
+}
+
+.row {
+  margin-top: 30px;
+}
+
+.letter {
   display: block;
-  border: 2px solid black; 
-  height: 250px;
-  width: 150px;
+  margin-top: 60px;
 }
