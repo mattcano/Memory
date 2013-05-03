@@ -61,25 +61,32 @@ $(document).ready(function(){
       var cardHid = "<div id='" + counter + "'class='span2 card'><span class='letter'>#</span></div>"
       $("#gameBoard").append(cardHid);
       $('#' + counter).on('click', function () {
-        console.log(counter);
+        $(this).addClass("flipped");
         $(this).flip({
           direction: 'bt',
           content: "<span class='letter'>" + boardObj[counter] + "</span>",
           color: '#f4da69',
+          onEnd: function (){
+            if ($(".flipped").length === 2) {
+              var flip = $(".flipped");
+              for (var i=0; i<flip.length; i++){
+                var id = flip.first().attr('id');
+                console.log(id);
+                // $('#' + id).revertFlip();
+              }
+              // $(".flipped").removeClass("flipped");
+              // _.each($(".flipped"), function (n) {
+              //   n.removeClass("flipped");
+              //   n.revertFlip();
+              // });
+            }
+          }
         });
-
-        
       });
 
     });
 
   });
-
-  // $('.card').on('click'), function () {
-  //   $(this).flip({
-  //     direction: 'tb'
-  //   });
-  // };
 
 
 
