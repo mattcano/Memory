@@ -22,7 +22,7 @@ function board(size){
 
   boardLetters = _.shuffle(boardLetters);
 
-  for (var i = 1; i < size; i++ ) {
+  for (var i = 1; i < size + 1; i++ ) {
     boardMap[i] = boardLetters[i-1];
   };
 

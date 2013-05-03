@@ -1,3 +1,20 @@
 #timer:before {
   content: "Time elapsed: ";
 }
+
+#card {
+
+}
+
+.cards {
+  border: 2px solid black; 
+  height: 500px;
+  width: 300px;
+  font-family: 'Oleo Script Swash Caps', serif;
+  font-weight: bold;
+  font-size: 5em;
+  display: block;
+  border: 2px solid black; 
+  height: 250px;
+  width: 150px;
+}
