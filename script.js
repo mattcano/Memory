@@ -25,13 +25,20 @@ function board(size){
   for (var i = 1; i < size + 1; i++ ) {
     boardMap[i] = boardLetters[i-1];
   };
-
   return boardMap;
 
+  function loadBoard(){
+    for (var i = 1; i < size + 1; i++){
+    $('.card').html('<div class="span4 card">' + boardMap[i] '</div>')
+    };
+  }
 }
+  
+
 
 //timer function
 $(document).ready(function(){
+
   var elapsedTime = 0;
   $('#startbutton').on('click', function(){
   window.setInterval(timerFunction, 1000);
